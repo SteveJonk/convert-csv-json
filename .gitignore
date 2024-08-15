@@ -2,6 +2,8 @@
 /locales/*.json
 /output/*.json
 
+.DS_Store
+
 # Logs
 logs
 *.log

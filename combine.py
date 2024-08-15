@@ -11,6 +11,20 @@ output_folder = 'output'
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
+# Function to deeply merge two dictionaries
+def deep_merge(dict1, dict2):
+    for key, value in dict2.items():
+        if key in dict1:
+            if isinstance(value, dict) and isinstance(dict1[key], dict):
+                # If both values are dictionaries, merge them recursively
+                deep_merge(dict1[key], value)
+            else:
+                # Otherwise, overwrite with the value from dict2
+                dict1[key] = value
+        else:
+            dict1[key] = value
+    return dict1
+
 # Get the list of JSON files in the 'locales' folder
 locales_files = os.listdir(locales_folder)
 
@@ -22,18 +36,18 @@ for locales_file in locales_files:
     # Check if the file exists in the 'new' folder
     if os.path.isfile(new_file):
         # Open the JSON files
-        with open(os.path.join(locales_folder, locales_file)) as locales_json, open(new_file) as new_json:
+        with open(os.path.join(locales_folder, locales_file), 'r', encoding='utf-8') as locales_json, open(new_file, 'r', encoding='utf-8') as new_json:
             # Load the JSON data
             locales_data = json.load(locales_json)
             new_data = json.load(new_json)
         
-        # Combine the JSON data with the locales data overwriting existing keys
-        combined_data = {**locales_data, **new_data}
+        # Deeply merge the JSON data
+        combined_data = deep_merge(locales_data, new_data)
         
         # Save the combined data to the 'output' folder
         output_file = os.path.join(output_folder, locales_file)
-        with open(output_file, 'w') as output_json:
-            json.dump(combined_data, output_json, indent=4)
+        with open(output_file, 'w', encoding='utf-8') as output_json:
+            json.dump(combined_data, output_json, indent=4, ensure_ascii=False)
     
     # If the file doesn't exist in the 'new' folder, copy it from the 'locales' folder to the 'output' folder
     else:
