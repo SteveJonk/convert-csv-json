@@ -11,32 +11,32 @@ output_folder = 'output'
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
-# Get the list of JSON files in the 'new' folder
-new_files = os.listdir(new_folder)
+# Get the list of JSON files in the 'locales' folder
+locales_files = os.listdir(locales_folder)
 
-# Iterate over the files in the 'new' folder
-for new_file in new_files:
-    # Get the corresponding file path in the 'locales' folder
-    locales_file = os.path.join(locales_folder, new_file)
+# Iterate over the files in the 'locales' folder
+for locales_file in locales_files:
+    # Get the corresponding file path in the 'new' folder
+    new_file = os.path.join(new_folder, locales_file)
     
-    # Check if the file exists in the 'locales' folder
-    if os.path.isfile(locales_file):
+    # Check if the file exists in the 'new' folder
+    if os.path.isfile(new_file):
         # Open the JSON files
-        with open(os.path.join(new_folder, new_file)) as new_json, open(locales_file) as locales_json:
+        with open(os.path.join(locales_folder, locales_file)) as locales_json, open(new_file) as new_json:
             # Load the JSON data
-            new_data = json.load(new_json)
             locales_data = json.load(locales_json)
+            new_data = json.load(new_json)
         
-        # Combine the JSON data
-        combined_data = {**new_data, **locales_data}
+        # Combine the JSON data with the locales data overwriting existing keys
+        combined_data = {**locales_data, **new_data}
         
         # Save the combined data to the 'output' folder
-        output_file = os.path.join(output_folder, new_file)
+        output_file = os.path.join(output_folder, locales_file)
         with open(output_file, 'w') as output_json:
             json.dump(combined_data, output_json, indent=4)
     
-    # If the file doesn't exist in the 'locales' folder, copy it from the 'new' folder to the 'output' folder
+    # If the file doesn't exist in the 'new' folder, copy it from the 'locales' folder to the 'output' folder
     else:
-        shutil.copyfile(os.path.join(new_folder, new_file), os.path.join(output_folder, new_file))
+        shutil.copyfile(os.path.join(locales_folder, locales_file), os.path.join(output_folder, locales_file))
 
 print('JSON files combined and outputted to the "output" folder.')

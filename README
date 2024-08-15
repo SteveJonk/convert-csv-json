@@ -1,3 +1,17 @@
+Some requirements:
+
+- Install python3
+- Make sure to save your csv as utf-8 encoded (or you'll get errors)
+
+Note:
 The node script doesn't work yet.
 Python does.
-To run this, simply run `python3 script.py` in the terminal.
+
+To run this, simply do the following:
+
+1. Replace the contents of translations.csv with your own translations (make sure it's utf-8 encoded and that the first row is the keys)
+2. Run the following command: `python3 convert.py`
+3. Copy all current locales from the repo to the `locales` folder
+4. Run the following command: `python3 combine.py`
+5. The new locales will be in the `output` folder
+6. Copy the contents of the `output` folder to the `locales` folder in the repo

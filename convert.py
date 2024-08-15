@@ -12,7 +12,7 @@ filename = 'translations.csv'  # replace with your filename
 output_directory = 'new'
 
 # Open the CSV
-with open(filename, 'r', encoding='ISO-8859-1') as f:
+with open(filename, 'r', encoding='utf-8') as f:
     reader = csv.reader(f)
 
     # Get the entire data of the file
@@ -26,10 +26,10 @@ with open(filename, 'r', encoding='ISO-8859-1') as f:
         data = {}
         
         # Create a new JSON file for this column
-        with open(os.path.join(output_directory, output_filename), 'w') as jsonf:
+        with open(os.path.join(output_directory, output_filename), 'w', encoding='utf-8') as jsonf:
             for i in range(1, len(rows)):
                 key_parts = rows[i][0].split('.')
                 nested_set(data, key_parts, rows[i][j])
 
-            # Write data to this JSON file
-            jsonf.write(json.dumps(data, indent=4))
+            # Write data to this JSON file with special characters preserved
+            jsonf.write(json.dumps(data, indent=4, ensure_ascii=False))
