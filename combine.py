@@ -47,7 +47,8 @@ for locales_file in locales_files:
         # Save the combined data to the 'output' folder
         output_file = os.path.join(output_folder, locales_file)
         with open(output_file, 'w', encoding='utf-8') as output_json:
-            json.dump(combined_data, output_json, indent=4, ensure_ascii=False)
+            # Set indent to 2 spaces
+            json.dump(combined_data, output_json, indent=2, ensure_ascii=False)
     
     # If the file doesn't exist in the 'new' folder, copy it from the 'locales' folder to the 'output' folder
     else:
