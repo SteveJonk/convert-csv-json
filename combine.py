@@ -17,7 +17,7 @@ def deep_merge(dict1, dict2):
         if key in dict1:
             if isinstance(value, dict) and isinstance(dict1[key], dict):
                 # If both values are dictionaries, merge them recursively
-                deep_merge(dict1[key], value)
+                dict1[key] = deep_merge(dict1[key], value)
             else:
                 # Otherwise, overwrite with the value from dict2
                 dict1[key] = value
@@ -47,8 +47,9 @@ for locales_file in locales_files:
         # Save the combined data to the 'output' folder
         output_file = os.path.join(output_folder, locales_file)
         with open(output_file, 'w', encoding='utf-8') as output_json:
-            # Set indent to 2 spaces
+            # Set indent to 2 spaces and add a newline after the JSON data
             json.dump(combined_data, output_json, indent=2, ensure_ascii=False)
+            output_json.write('\n')  # Add a newline at the end
     
     # If the file doesn't exist in the 'new' folder, copy it from the 'locales' folder to the 'output' folder
     else:
