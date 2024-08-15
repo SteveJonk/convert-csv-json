@@ -1,5 +1,6 @@
 import csv
 import json
+import os
 
 
 def nested_set(dic, keys, value):
@@ -8,6 +9,7 @@ def nested_set(dic, keys, value):
     dic[keys[-1]] = value
 
 filename = 'translations.csv'  # replace with your filename
+output_directory = 'new'
 
 # Open the CSV
 with open(filename, 'r', encoding='ISO-8859-1') as f:
@@ -24,7 +26,7 @@ with open(filename, 'r', encoding='ISO-8859-1') as f:
         data = {}
         
         # Create a new JSON file for this column
-        with open(output_filename, 'w') as jsonf:
+        with open(os.path.join(output_directory, output_filename), 'w') as jsonf:
             for i in range(1, len(rows)):
                 key_parts = rows[i][0].split('.')
                 nested_set(data, key_parts, rows[i][j])

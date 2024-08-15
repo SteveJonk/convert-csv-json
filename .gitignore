@@ -1,4 +1,6 @@
-*.json
+/new/*.json
+/locales/*.json
+/output/*.json
 
 # Logs
 logs
