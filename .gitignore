@@ -3,6 +3,7 @@
 /output/*.json
 
 *.csv
+!translations.csv
 *.xlsx
 
 .DS_Store
