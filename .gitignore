@@ -2,6 +2,13 @@
 /locales/*.json
 /output/*.json
 
+!/new/en-GB.json
+!/locales/en-GB.json
+!/output/en-GB.json
+!/new/da-DK.json
+!/locales/da-DK.json
+!/output/da-DK.json
+
 *.csv
 !translations.csv
 *.xlsx
