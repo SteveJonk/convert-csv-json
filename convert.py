@@ -33,3 +33,5 @@ with open(filename, 'r', encoding='utf-8') as f:
 
             # Write data to this JSON file with special characters preserved
             jsonf.write(json.dumps(data, indent=4, ensure_ascii=False))
+
+print('CSV file converted into JSON files and outputted to the "new" folder.')
