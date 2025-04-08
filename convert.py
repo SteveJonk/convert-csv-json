@@ -8,7 +8,7 @@ def nested_set(dic, keys, value):
         dic = dic.setdefault(key, {})
     dic[keys[-1]] = value
 
-filename = 'translations.csv'  # replace with your filename
+filename = 'eventCart.csv'  # replace with your filename
 output_directory = 'new'
 
 # Open the CSV
