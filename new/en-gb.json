@@ -1,0 +1,12 @@
+{
+    "cart": {
+        "entry": {
+            "event": {
+                "addParticipant": "Add More Participants",
+                "participant": "Participant"
+            }
+        }
+    },
+    "cancel": "Cancel",
+    "update": "Update"
+}

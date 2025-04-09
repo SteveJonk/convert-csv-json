@@ -1,6 +1,9 @@
 /new/*.json
 /locales/*.json
 /output/*.json
+/new/*.ts
+/locales/*.ts
+/output/*.ts
 
 !/new/en-GB.json
 !/locales/en-GB.json
