@@ -2,11 +2,9 @@
     "cart": {
         "entry": {
             "event": {
-                "addParticipant": "Tilføj flere deltagere",
-                "participant": "Deltager"
+                "commentLimitErrorMessage": "Kommentaren må højst indeholde {limit} tegn.",
+                "participantNameLimitErrorMessage": "Navnet må højst indeholde {limit} tegn."
             }
         }
-    },
-    "cancel": "Annuller",
-    "update": "Opdater"
+    }
 }

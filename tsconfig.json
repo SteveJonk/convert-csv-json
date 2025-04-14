@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "types": ["node"],             // 👈 Add this
+    "resolveJsonModule": true,     // 👈 Optional if you're importing JSON files directly
+    "skipLibCheck": true
+  }
+}

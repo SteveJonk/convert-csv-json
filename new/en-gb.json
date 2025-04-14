@@ -2,11 +2,9 @@
     "cart": {
         "entry": {
             "event": {
-                "addParticipant": "Add More Participants",
-                "participant": "Participant"
+                "commentLimitErrorMessage": "The comment must be below {limit} characters.",
+                "participantNameLimitErrorMessage": "The name must be below {limit} characters."
             }
         }
-    },
-    "cancel": "Cancel",
-    "update": "Update"
+    }
 }

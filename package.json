@@ -4,12 +4,20 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "convert": "node script.js"
+    "convert": "node script.js",
+    "combine": "ts-node combine.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "csv-parser": "^3.0.0",
     "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/lodash.merge": "^4.6.9",
+    "@types/node": "^22.14.1",
+    "lodash.merge": "^4.6.2",
+    "ts-morph": "^25.0.1",
+    "ts-node": "^10.9.2"
   }
 }
