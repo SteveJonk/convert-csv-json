@@ -2,8 +2,18 @@ import fs from 'fs';
 import path from 'path';
 import { Project } from 'ts-morph';
 import merge from 'lodash.merge';
+import prettier from 'prettier';
 
-// Helper to evaluate exported default object from TS file
+const PRETTIER_CONFIG = {
+    trailingComma: 'es5' as 'es5',
+    tabWidth: 2,
+    semi: false,
+    singleQuote: true,
+    printWidth: 120,
+    quoteProps: 'as-needed' as 'as-needed',
+    parser: 'babel' as 'babel',
+}
+
 function getDefaultExportObject(tsFilePath: string): any {
     const project = new Project();
     const sourceFile = project.addSourceFileAtPath(tsFilePath);
@@ -29,18 +39,25 @@ function getDefaultExportObject(tsFilePath: string): any {
     }
 }
 
-// Merge and write one file
-function mergeAndWrite(jsonPath: string, tsPath: string, outputPath: string) {
-    console.log(`Merging ${path.basename(tsPath)}...`);
+async function mergeAndWrite(jsonPath: string, tsPath: string, outputPath: string) {
+    const jsonObject = JSON.parse(fs.readFileSync(jsonPath, 'utf8'))
+    const tsObject = getDefaultExportObject(tsPath)
 
-    const jsonObject = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-    const tsObject = getDefaultExportObject(tsPath);
+    const merged = merge({}, tsObject, jsonObject)
 
-    const merged = merge({}, tsObject, jsonObject);
-    const output = `export default ${JSON.stringify(merged, null, 2)};\n`;
-    fs.writeFileSync(outputPath, output, 'utf8');
-    console.log(`✓ Written to ${outputPath}`);
+    // Step 1: stringify merged object with quotes preserved
+    const raw = `export default ${JSON.stringify(merged, null, 2)};\n`
+
+    // Step 2: format with Prettier
+    const prettifiedObject = await prettier.format(raw, PRETTIER_CONFIG)
+
+    // Step 3: re-add quotes around numeric keys (e.g., 500:)
+    const output = prettifiedObject.replace(/^(\s*)(\d+):/gm, `$1'$2':`)
+
+    fs.writeFileSync(outputPath, output, 'utf8')
+    console.log(`✓ Merged: ${path.basename(tsPath)} -> ${outputPath}`)
 }
+
 
 // Process all matching files
 function mergeAllLocales(jsonDir: string, tsDir: string, outputDir: string) {
