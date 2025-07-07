@@ -5,7 +5,8 @@
   "main": "script.js",
   "scripts": {
     "convert": "node script.js",
-    "combine": "ts-node combine.ts"
+    "combine": "ts-node combine.ts",
+    "convertArrays": "node convertArrays.js"
   },
   "author": "",
   "license": "ISC",

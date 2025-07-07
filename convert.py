@@ -8,7 +8,7 @@ def nested_set(dic, keys, value):
         dic = dic.setdefault(key, {})
     dic[keys[-1]] = value
 
-filename = 'editEventErrors.csv'  # replace with your filename
+filename = 'VoucherRedemptionTranslations-v1.csv'  # replace with your filename
 output_directory = 'new'
 
 # Open the CSV
@@ -28,8 +28,10 @@ with open(filename, 'r', encoding='utf-8') as f:
         # Create a new JSON file for this column
         with open(os.path.join(output_directory, output_filename), 'w', encoding='utf-8') as jsonf:
             for i in range(1, len(rows)):
-                key_parts = rows[i][0].split('.')
-                nested_set(data, key_parts, rows[i][j])
+                # Only add the key if the value is not empty
+                if rows[i][j].strip():  # This checks for non-empty strings (ignoring whitespace)
+                    key_parts = rows[i][0].split('.')
+                    nested_set(data, key_parts, rows[i][j])
 
             # Write data to this JSON file with special characters preserved
             jsonf.write(json.dumps(data, indent=4, ensure_ascii=False))

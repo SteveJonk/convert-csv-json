@@ -1,10 +1,100 @@
 {
-    "cart": {
-        "entry": {
-            "event": {
-                "commentLimitErrorMessage": "The comment must be below {limit} characters.",
-                "participantNameLimitErrorMessage": "The name must be below {limit} characters."
-            }
-        }
+  "voucherRedemption": {
+    "faq": {
+      "heading": {
+        "headline": "Voucher Redemption",
+        "size": "headline",
+        "emphasizeAfter": "FAQ",
+        "paragraph": "If you have more questions about our voucher code, please find the answers to the most common questions below."
+      }
+    },
+    "howTo": {
+      "title": "Redeem voucher",
+      "headlineFirst": "Follow these",
+      "headlineSecond": "Simple steps",
+      "tagline": "How to redeem your Miele voucher",
+      "steps": [
+        "Enter the voucher code in the field above. Be sure to enter it exactly as it appears, including upper and lowercase letters.",
+        "Enter the voucher code in the field above. Be sure to enter it exactly as it appears, including upper and lowercase letters.",
+        "Click ‘Redeem voucher’ to proceed.",
+        "Log in or register. You may be prompted to do so depending on your voucher type.",
+        "Choose your complimentary gift and add it to your basket.",
+        "Click ‘Checkout’ to finalise your order. Your gift will be applied automatically, with free shipping included."
+      ],
+      "additionalText": "Redeem this voucher before adding your items to your basket. It's not possible to redeem a voucher after adding your items.",
+      "callToAction": "Redeem voucher"
+    },
+    "contactUs": {
+      "headline": "Need assistance?",
+      "paragraph": "We're here to help. Choose one of the options below for assistance and advice from our team.",
+      "email": {
+        "title": "Send us an email",
+        "description": "Please provide as much detail as possible, and we'll respond within 2 business days.",
+        "cta": "Send email"
+      },
+      "call": {
+        "title": "Give us a call",
+        "description": "Speak with one of our team members for immediate support. We're available during business hours on 0330 160 6600.",
+        "number": "0330 160 6600",
+        "cta": "Call now"
+      },
+      "form": {
+        "title": "Use our contact form",
+        "description": "Fill out the form with your query, and we'll get back to you within two business days.",
+        "url": "https://www.miele.co.uk/c/contact-11.htm",
+        "cta": "Contact form"
+      }
+    },
+    "voucherSection": {
+      "headlineFirst": "Savings await!",
+      "headlineSecond": "Use your voucher.",
+      "tagline": "Voucher redemption",
+      "paragraph": "Thank you for choosing Miele. Your exclusive voucher is ready for use. Claim your complimentary gift now and enjoy all the benefits Miele has to offer. Simply enter your voucher code below and follow the steps.D44",
+      "learnMore": "Learn more"
     }
+  },
+  "loginRegistrationDrawer": {
+    "continue": "Continue",
+    "headerCheckEmail": "Details",
+    "headerForgotPassword": "Recover password",
+    "headerLogin": "Login",
+    "headerRegister": "Register",
+    "details": {
+      "title": "Email address",
+      "notificationTitle": "Login or Register",
+      "notificationMessage": "To redeem this voucher you must be logged in or have a Miele account.",
+      "error": "Something went wrong, please try again. If you encounter this message again, please contact customer service."
+    },
+    "login": {
+      "title": "Welcome back",
+      "emailInputLabel": "E-mail",
+      "forgotPwdButtonLabel": "I forgot my password",
+      "invalidEmailMessage": "E-mail not valid",
+      "passwordInputLabel": "Password"
+    },
+    "forgotPassword": {
+      "title": "Recover password",
+      "backToLoginLabel": "Back to login",
+      "submitButtonLabel": "Recover password",
+      "successMessage": "Email sent! If this e-mail is connected to a valid account, you will soon receive an email to reset your password."
+    },
+    "loginSuccess": "You are now logged in. Please try the code again to redeem your voucher.",
+    "register": {
+      "title": "Create a Miele Account",
+      "emailInputLabel": "E-mail",
+      "invalidEmailMessage": "E-mail not valid",
+      "revokeMessage": "I can revoke my consent at any time without giving reasons with effect for the future. For more information on how Miele handles your data, please refer to Miele's data protection policy."
+    }
+  },
+  "formValidation": {
+    "required": "This field is required",
+    "invalidEmailMessage": "E-mail not valid",
+    "maxLength": "Maximum possible characters {maxLength}"
+  },
+  "cart": {
+    "voucher": {
+      "redeemTagline": "Your savings await!",
+      "redeemDescription": "Thank you for choosing Miele! To show our appreciation, we’d love to offer you a complimentary gift. Explore the options below and select your favourite."
+    }
+  }
 }

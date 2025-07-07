@@ -1,0 +1,114 @@
+{
+  "URL Slug (please add the slug)": "/v/voucherkode",
+  "voucherRedemption": {
+    "faq": {
+      "heading": {
+        "headline": "Indløs voucher",
+        "emphasizeAfter": "FAQ",
+        "paragraph": "Hvis du har spørgsmål vedrørende vores voucherkode, finder du svarene på de mest almindelige spørgsmål nedenfor."
+      },
+      "accordion": [
+        {
+          "label": "Hvorfor virker min voucherkode ikke?",
+          "text": "Mieles voucherkoder skelner mellem store og små bogstaver. Vær derfor opmærksom på, at du indtaster koden korrekt. Hvis du stadig ikke kan indløse din voucher, bedes du kontakte Miele Service på telefonnummer 4327 1310 eller via kontaktformularen (https://www.miele.dk/c/kontakt-11.htm)."
+        },
+        {
+          "label": "Kan jeg bruge mere end én voucher-kode på min ordre?",
+          "text": "Du kan kun bruge én kode pr. ordre."
+        },
+        {
+          "label": "Kan jeg bruge min voucher-kode mere end én gang?",
+          "text": "Alle voucher-koder kan kun benyttes én gang."
+        }
+      ]
+    },
+    "howTo": {
+      "title": "Indløs voucher",
+      "headlineFirst": "Følg disse",
+      "headlineSecond": "enkle trin.",
+      "tagline": "Sådan indløser du din Miele-voucher.",
+      "steps": [
+        "Indtast voucherkoden i feltet ovenfor. Vær opmærksom på store og små bogstaver i voucherkoden. ",
+        "Indtast voucherkoden i feltet ovenfor. Vær opmærksom på store og små bogstaver i voucherkoden. ",
+        "Klik på \"Indløs voucher\" for at gå videre.",
+        "Log ind eller registrér ny konto. ",
+        "Vælg din gratis gave, og tilføj den til din kurv.",
+        "Klik på \"Til betaling\" for at afslutte din ordre. Din gave bliver automatisk tilføjet, og gratis levering er inkluderet."
+      ],
+      "additionalText": "Indløs din voucher, før du lægger varerne i kurven. Det er ikke muligt at indløse en voucher, efter at varerne er lagt i kurven.",
+      "callToAction": "Indløs voucher"
+    },
+    "contactUs": {
+      "headline": "Har du brug for hjælp?",
+      "paragraph": "Vi er her for at hjælpe. Vælg en af nedenstående muligheder for at få hjælp og rådgivning fra vores team.",
+      "email": {
+        "title": "Send os en e-mail",
+        "description": "Skriv så mange oplysninger som muligt. Vi vender tilbage inden for 2 hverdage.",
+        "cta": "Send e-mail"
+      },
+      "call": {
+        "title": "Kontakt os telefonisk",
+        "description": "Tal med en af vores medarbejdere for øjeblikkelig support. Vi er tilgængelige i åbningstiden på 4327 1310.",
+        "number": "4327 1310",
+        "cta": "Ring nu"
+      },
+      "form": {
+        "title": "Brug vores kontaktformular",
+        "description": "Udfyld formularen med din forespørgsel, så vender vi tilbage inden for to hverdage.",
+        "url": "https://www.miele.dk/c/kontakt-11.htm",
+        "cta": "Kontaktformular"
+      }
+    },
+    "voucherSection": {
+      "headlineFirst": "Din gave venter på dig!",
+      "headlineSecond": "Brug din voucher.",
+      "tagline": "Indløs voucher",
+      "paragraph": "Tak, fordi du har valgt Miele. Din eksklusive voucher er klar til brug. Bestil din gratis gave nu, og få glæde af alle de fordele, Miele  tilbyder. Indtast din voucherkode nedenfor, og følg trinene.",
+      "learnMore": "Læs mere"
+    }
+  },
+  "loginRegistrationDrawer": {
+    "continue": "Fortsæt",
+    "headerCheckEmail": "Detaljer",
+    "headerForgotPassword": "Nulstil adgangskode",
+    "headerLogin": "Login",
+    "headerRegister": "Registrér",
+    "details": {
+      "title": "E-mailadresse",
+      "notificationTitle": "Login eller registrér",
+      "notificationMessage": "For at indløse denne voucher skal du være logget ind eller have en Miele-konto.",
+      "error": "Der opstod en fejl. Prøv igen. Hvis du får denne meddelelse igen, bedes du kontakte kundeservice."
+    },
+    "login": {
+      "title": "Velkommen tilbage",
+      "emailInputLabel": "E-mail",
+      "forgotPwdButtonLabel": "Jeg har glemt min adgangskode",
+      "invalidEmailMessage": "E-mailadresse ugyldig",
+      "passwordInputLabel": "Adgangskode"
+    },
+    "forgotPassword": {
+      "title": "Nulstil adgangskode",
+      "backToLoginLabel": "Tilbage til login",
+      "submitButtonLabel": "Nulstil adgangskode",
+      "successMessage": "E-mail sendt! Hvis denne e-mail er knyttet til en gyldig konto, modtager du snart en e-mail til nulstilling af din adgangskode."
+    },
+    "loginSuccess": "Du er nu logget ind. Indtast koden igen for at indløse din voucher.",
+    "register": {
+      "title": "Opret en brugerkonto",
+      "emailInputLabel": "E-mail",
+      "invalidEmailMessage": "E-mailadresse ugyldig",
+      "revokeMessage": "Jeg kan til enhver tid tilbagekalde mit samtykke uden at angive nogen grund og med virkning for fremtiden. For mere information om, hvordan Miele behandler dine data, henvises der til Mieles databeskyttelsespolitik."
+    }
+  },
+  "formValidation": {
+    "required": "Dette felt er obligatorisk",
+    "invalidEmailMessage": "E-mailadresse ugyldig",
+    "maxLength": "Maksimalt antal tegn: {maxLength}"
+  },
+  "cart": {
+    "voucher": {
+      "redeemTagline": "Din gave venter på dig!",
+      "redeemDescription": "Tak, fordi du har valgt Miele. Som tak får du en gratis gave. Se mulighederne nedenfor, og vælg din yndlingsgave."
+    }
+  }
+}
